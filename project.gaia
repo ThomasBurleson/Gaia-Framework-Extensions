@@ -1,0 +1,45 @@
+﻿<project>
+  <name>Insertables Feature Tour</name>
+  <language>AS3</language>
+  <player>10</player>
+  <version>3.2.3</version>
+  <tweenMax>11.38</tweenMax>
+  <width>700</width>
+  <height>400</height>
+  <width100>false</width100>
+  <height100>false</height100>
+  <centerX>false</centerX>
+  <centerY>false</centerY>
+  <bgColor>424242</bgColor>
+  <fps>30</fps>
+  <uri>file:///MercuryProSSD/Users/thomasburleson/Documents/projects/ThunderBay/gaia</uri>
+  <flashPath>lib</flashPath>
+  <publishPath>deploy</publishPath>
+  <classesPath>src</classesPath>
+  <siteXmlPath>xml</siteXmlPath>
+  <classPackage>pages</classPackage>
+  <template>Actionscript</template>
+  <seo>false</seo>
+  <domain>www.insertables.com/</domain>
+  <modified>1292964026627</modified>
+  <optimizeTypes>
+    <bitmapAsset>true</bitmapAsset>
+    <bitmapSpriteAsset>true</bitmapSpriteAsset>
+    <soundAsset>false</soundAsset>
+    <soundClipAsset>true</soundClipAsset>
+    <netStreamAsset>false</netStreamAsset>
+    <textAsset>false</textAsset>
+    <xmlAsset>false</xmlAsset>
+    <styleSheetAsset>true</styleSheetAsset>
+    <jsonAsset>false</jsonAsset>
+    <byteArrayAsset>false</byteArrayAsset>
+  </optimizeTypes>
+  <publishData>
+    <node label="lib" checked="1">
+      <node label="main.fla" icon="mainFileIcon" checked="1" src="./lib/main.fla"/>
+      <node label="preload.fla" icon="flashFileIcon" checked="1" src="./lib/preload.fla"/>
+      <node label="nav.fla" icon="flashFileIcon" checked="1" src="./lib/nav.fla"/>
+      <node label="slides.fla" icon="flashFileIcon" checked="1" src="./lib/slide4.fla"/>
+    </node>
+  </publishData>
+</project>

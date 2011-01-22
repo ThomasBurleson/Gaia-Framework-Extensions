@@ -1,0 +1,103 @@
+fs      = require 'fs'
+{exec}  = require 'child_process'
+
+closure  = '/Developer/Applications/closure/compiler.jar'
+deployTo = '../deploy/assets/js/insertables.js'
+
+# ANSI Terminal Colors.
+bold  = '\033[0;1m'
+red   = '\033[0;31m'
+green = '\033[0;32m'
+yellow = '\033[0;33m'
+yellow_bold = '\033[1;33m'
+reset = '\033[0m'
+
+coffeeScripts  = [
+                # omit src/ and .coffee to make the below lines a little shorter
+                # 'scripts/Utils'
+                'scripts/Insertables'
+                ]
+
+javaScripts = [
+                'src/includes/Utils.js'
+                'src/includes/Namespace.js'
+                'src/includes/Spritely.js'
+                'src/includes/SlideBox.js'
+                'src/includes/Animations.js'
+              ]
+
+# Log a message with a color.
+log = (message, color = "#{green}", explanation) ->
+  console.log color + message + reset + ' ' + (explanation or '')
+        
+option '-f', '--filename [path]', 'set the filename for the for `cake build`'                   
+    
+# cake -f bin/beta.js build          
+task 'build', 'Build single application bin/beta.js (of --filename) file from source Coffee files', (options) ->
+    
+    appContents = ''
+    fileName    = options?.filename.split('.')[0] or "bin/beta"       # remove the .js suffix if it exists...
+    remaining   = coffeeScripts.length
+    
+    # buildCoffees()  - aggregate all coffeeScripts into single file for compile
+    for file in coffeeScripts
+      fs.readFile "src/#{file}.coffee", 'utf8', (err, csContents) ->
+        throw err if err
+        appContents += csContents + '\n\n'
+        compileCoffees(fileName, appContents, onComplete_compile) if --remaining is 0
+     
+      # Coffee scripts compiled to single javascript file
+      onComplete_compile = (generated)->        
+        javaScripts.push(generated)
+        
+        remaining   = javaScripts.length
+        appContents = ''
+        
+        # Now aggregate (into single file) generated javascript with 3rd party javascripts
+        for file in javaScripts
+            fs.readFile file, "utf8", (err, jsContents) ->
+                throw err if err
+                appContents += jsContents  + '\n\n'
+                outputGenerated(generated, appContents) if --remaining is 0
+      
+      # generate output js
+      outputGenerated = (fileName, content) ->
+          fs.writeFile fileName, content, 'utf8', (err) ->
+              throw err if err
+              log "Compiled: #{yellow} #{fileName} #{green}"
+       
+      # compile all the aggregated coffeeScripts into an aggregated javascript
+      compileCoffees = (fileName, content, completeFunc) ->
+        fs.writeFile "#{fileName}.coffee", content, 'utf8', (err) ->
+            throw err if err
+            exec "coffee --compile #{fileName}.coffee", (err, stdout, stderr) ->
+              throw err if err
+              log stdout + stderr
+              completeFunc?("#{fileName}.js");
+
+          
+task 'minify', 'Minify the resulting application file after build', (options) ->
+    fileName    = options?.filename.split('.')[0] or "bin/beta"       # remove the .js suffix if it exists...
+    
+    exec "java -jar #{closure} --js #{fileName}.js --js_output_file #{fileName}.min.js", (err, stdout, stderr) ->
+        if err 
+            console.log stderr.trim(), red
+            fs.unlink "#{fileName}.min.js"
+        else 
+            log "Minified: #{red} #{fileName}.min.js #{green}", green
+
+task 'deploy', 'Build coffee scripts, combine all javascripts, and minify', (options) ->
+    fileName    = "bin/beta"                        
+    deployTo    = options?.filename or  '../deploy/assets/js/insertables.min.js'
+    
+    exec "cake -f #{fileName} build && cake -f #{fileName} minify", (err, stdout, stderr) ->
+        console.log stdout.trim() if stdout
+        console.log stderr.trim() if stderr
+        throw err if err
+        
+        fs.link "#{fileName}.min.js", deployTo        
+        # fs.unlink "#{fileName}.js"
+        # fs.unlink "#{fileName}.min.js"
+        
+        log "Deployed: #{yellow} #{deployTo}"
+            

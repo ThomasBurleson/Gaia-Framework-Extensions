@@ -1,0 +1,27 @@
+﻿<site title="Insertables: %PAGE%" menu="true">
+  
+  <slides>
+    <workflow>
+      <flow id="slide1" next="nav/slide2"   previous="" />
+      <flow id="slide2" next="nav/slide3"   previous="nav/slide1" />
+      <flow id="slide3" next="nav/slide4"   previous="nav/slide2" />
+      <flow id="slide4" next="nav/slide1"   previous="nav/slide3" />
+    </workflow>
+  </slides>
+  
+  <page id="nav" title="Nav" src="assets/nav.swf" depth="top" menu="false" bytes="4341">
+    <page id="slide1" title="Tour Insertables" src="assets/slides.swf" bytes="71600" menu="true" seo="true" seoBytes="2086">
+      <asset src="assets/slides/slide1.swf" id="slide1_content"  autoCenter="true" width="600" height="400" bytes="129438"  />
+    </page>
+    <page id="slide2" title="Multi-page Web Forms" src="assets/slides.swf" bytes="71600" menu="true" >
+      <asset src="assets/slides/slide2.swf" id="slide2_content"  autoCenter="true" width="600" height="400" bytes="119839"  />
+    </page>
+    <page id="slide3" title="Multilingual Web Forms" src="assets/slides.swf" bytes="71600" menu="true" >
+      <asset src="assets/slides/slide3.swf" id="slide3_content"  autoCenter="true" width="600" height="400" bytes="122251"  />
+    </page>
+    <page id="slide4" title="Use Anywhere" src="assets/slides.swf" bytes="71600"  menu="true" >
+      <asset src="assets/slides/slide4.swf" id="slide4_content" autoCenter="true" width="600" height="400" bytes="159141"  />
+    </page>
+  </page>
+  
+</site>

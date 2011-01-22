@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>Insertables_Tour</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>com.adobe.flexbuilder.project.flexbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.adobe.flexbuilder.project.actionscriptnature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>[source path] src</name>
+			<type>2</type>
+			<location>/Users/thomasburleson/Documents/dev/libs/as3-utils/src</location>
+		</link>
+		<link>
+			<name>bin-debug</name>
+			<type>2</type>
+			<location>/Developer/servers/railo-jetty/webroot/insertables_tour/assets</location>
+		</link>
+	</linkedResources>
+</projectDescription>

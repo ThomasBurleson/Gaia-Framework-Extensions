@@ -1,0 +1,36 @@
+<projectDescription>
+  <id>1292803807134</id>
+  <name>Insertables Tour</name>
+  <asVersion>0</asVersion>
+  <boundTemplate>file:///MercuryProSSD/Users/thomasburleson/Library/Application Support/Adobe/Flash CS5/en_US/Configuration/ActionScript 3.0/Templates/boundClass_as3.as</boundTemplate>
+  <classTemplate>file:///MercuryProSSD/Users/thomasburleson/Library/Application Support/Adobe/Flash CS5/en_US/Configuration/ActionScript 3.0/Templates/standardClass_as3.as</classTemplate>
+  <classPath>./src</classPath>
+  <defaultApp>file:///MercuryProSSD/Users/thomasburleson/Documents/projects/ThunderBay/gaia/lib/main.fla</defaultApp>
+  <rootURI>file:///MercuryProSSD/Users/thomasburleson/Documents/projects/ThunderBay/gaia/</rootURI>
+  <flexSDK>/Developer/Applications/FlashBuilder/sdks/4.1.0</flexSDK>
+  <sources editable="false">
+    <uri label=""/>
+    <uri label="src">/Users/thomasburleson/Documents/dev/libs/as3-utils/src</uri>
+  </sources>
+  <libraries editable="false"/>
+  <externalLibraries editable="false"/>
+  <compileList editable="false">
+    <uri label="main.fla">file:///MercuryProSSD/Users/thomasburleson/Documents/projects/ThunderBay/gaia/lib/main.fla</uri>
+    <uri label="nav.fla">file:///MercuryProSSD/Users/thomasburleson/Documents/projects/ThunderBay/gaia/lib/nav.fla</uri>
+    <uri label="preload.fla">file:///MercuryProSSD/Users/thomasburleson/Documents/projects/ThunderBay/gaia/lib/preload.fla</uri>
+    <uri label="slide1.fla">file:///MercuryProSSD/Users/thomasburleson/Documents/projects/ThunderBay/gaia/lib/slide1.fla</uri>
+  </compileList>
+  <recentFiles editable="false">
+    <uri label="main.fla">file:///MercuryProSSD/Users/thomasburleson/Documents/projects/ThunderBay/gaia/lib/main.fla</uri>
+    <uri label="nav.fla">file:///MercuryProSSD/Users/thomasburleson/Documents/projects/ThunderBay/gaia/lib/nav.fla</uri>
+    <uri label="SlidePage.as">file:///MercuryProSSD/Users/thomasburleson/Documents/projects/ThunderBay/gaia/src/pages/SlidePage.as</uri>
+    <uri label="slide1.fla">file:///MercuryProSSD/Users/thomasburleson/Documents/projects/ThunderBay/gaia/lib/slide1.fla</uri>
+    <uri label="supplant.as">file:///MercuryProSSD/Users/thomasburleson/Documents/dev/libs/as3-utils/src/utils/string/supplant.as</uri>
+    <uri label="AbstractPage.as">file:///MercuryProSSD/Users/thomasburleson/Documents/projects/ThunderBay/gaia/src/com/gaiaframework/templates/AbstractPage.as</uri>
+    <uri label="AbstractBase.as">file:///MercuryProSSD/Users/thomasburleson/Documents/projects/ThunderBay/gaia/src/com/gaiaframework/templates/AbstractBase.as</uri>
+    <uri label="Slide4Page.as">file:///MercuryProSSD/Users/thomasburleson/Documents/projects/ThunderBay/gaia/src/pages/Slide4Page.as</uri>
+  </recentFiles>
+  <locations editable="true">
+    <uri label="utils">file:///MercuryProSSD/Users/thomasburleson/Documents/dev/libs/as3-utils/src/utils/</uri>
+  </locations>
+</projectDescription>
