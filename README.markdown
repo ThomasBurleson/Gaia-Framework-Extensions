@@ -7,18 +7,24 @@ The Gaia framework provides loading mechanisms, caching, preloader, and slide tr
 ### Outline
 
 This repository contains the FlashBuilder project along with the Flash CS5 FLA files. 
+
 * Custom slide content is constructed in the *./slides/slides<xxx>.fla* master files... output is in *./deploy/assets/slides* [no Document classes]
+
 * Custom preloader is defined *./lib/preload.fla* [Docment class is 'pages.Preloader']
+
 * The slide container is defined by *./lib/slides.fla* [Document class is 'ext.gaiaframework.templates.SlidePage']
+
 * *Main.as* class is compiled and deployed by the Flashbuilder IDE and provides debugging and iterative compiles for developers.  
+
 * Greensock library that provides TweenLite and TweenMax for Gaia transitions
+
 * Gaia core framework
 
 ### Custom Extensions 
 
 Custom extensions include the:
 
-- [SlidePage](ext.gaiaframework.templates.*):  Document class used to build *slides.fla*; has AS3 logic to manage slide content.
+- [SlidePage](https://github.com/ThomasBurleson/Gaia-Framework-Extensions/blob/master/src/ext/gaiaframework/templates/SlidePage.as):  Document class used to build *slides.fla*; has AS3 logic to manage slide content.
 - [PageFlow](ext.gaiaframework.slides.*):  Singleton class used to parse site.xml to determine slide workflow.
 - [ContentCenterer](ext.gaiaframework.behaviors.*):  Behavior class used to auto center slide content (if desired)
 - [TimeLinkHooks](ext.gaiaframework.behaviors.*):  Behavior class used to inject framescripts in SWF slides (used for Gaia transitions)
