@@ -25,9 +25,9 @@ This repository contains the FlashBuilder project along with the Flash CS5 FLA f
 Custom extensions include the:
 
 - [SlidePage](https://github.com/ThomasBurleson/Gaia-Framework-Extensions/blob/master/src/ext/gaiaframework/templates/SlidePage.as):  Document class used to build *slides.fla*; has AS3 logic to manage slide content.
-- [PageFlow](ext.gaiaframework.slides.*):  Singleton class used to parse site.xml to determine slide workflow.
-- [ContentCenterer](ext.gaiaframework.behaviors.*):  Behavior class used to auto center slide content (if desired)
-- [TimeLinkHooks](ext.gaiaframework.behaviors.*):  Behavior class used to inject framescripts in SWF slides (used for Gaia transitions)
+- [PageFlow](https://github.com/ThomasBurleson/Gaia-Framework-Extensions/blob/master/src/ext/gaiaframework/slides/PageFlow.as):  Singleton class used to parse site.xml to determine slide workflow.
+- [ContentCenterer](https://github.com/ThomasBurleson/Gaia-Framework-Extensions/blob/master/src/ext/gaiaframework/behaviors/ContentCenterer.as):  Behavior class used to auto center slide content (if desired)
+- [TimeLineHooks](https://github.com/ThomasBurleson/Gaia-Framework-Extensions/blob/master/src/ext/gaiaframework/behaviors/TimeLineHooks.as):  Behavior class used to inject framescripts in SWF slides (used for Gaia transitions)
 
 ### History:
 
